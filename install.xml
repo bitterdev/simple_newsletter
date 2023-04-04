@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<concrete5-cif version="1.0">
+    <blocktypes>
+        <blocktype handle="subscribe_form" package="simple_newsletter"/>
+        <blocktype handle="unsubscribe_form" package="simple_newsletter"/>
+    </blocktypes>
+    <blocktypesets>
+        <blocktypeset handle="simple_newsletter" name="Simple Newsletter" package="simple_newsletter">
+            <blocktype handle="subscribe_form"/>
+            <blocktype handle="unsubscribe_form"/>
+        </blocktypeset>
+    </blocktypesets>
+    <tasks>
+        <task handle="send_newsletter" package="simple_newsletter"/>
+    </tasks>
+    <singlepages>
+        <page name="Simple Newsletter" path="/dashboard/simple_newsletter" filename="/dashboard/simple_newsletter.php"
+              package="simple_newsletter"/>
+        <page name="Settings" path="/dashboard/simple_newsletter/settings"
+              filename="/dashboard/simple_newsletter/settings.php" package="simple_newsletter"/>
+        <page name="Mailing Lists" path="/dashboard/simple_newsletter/mailing_lists"
+              filename="/dashboard/simple_newsletter/mailing_lists.php" package="simple_newsletter"/>
+        <page name="Campaigns" path="/dashboard/simple_newsletter/campaigns"
+              filename="/dashboard/simple_newsletter/campaigns.php" package="simple_newsletter"/>
+        <page name="Subscribers" path="/dashboard/simple_newsletter/subscribers"
+              filename="/dashboard/simple_newsletter/subscribers.php" package="simple_newsletter"/>
+        <page name="Attributes" path="/dashboard/simple_newsletter/subscribers/attributes"
+              filename="/dashboard/simple_newsletter/subscribers/attributes.php" package="simple_newsletter"/>
+    </singlepages>
+    <attributecategories>
+        <category handle="newsletter_subscriber" allow-sets="0" package="simple_newsletter"/>
+    </attributecategories>
+    <attributetypes>
+        <attributetype handle="text" name="Text" package="">
+            <categories>
+                <category handle="newsletter_subscriber"/>
+            </categories>
+        </attributetype>
+        <attributetype handle="textarea" name="Text Area" package="">
+            <categories>
+                <category handle="newsletter_subscriber"/>
+            </categories>
+        </attributetype>
+        <attributetype handle="boolean" name="Checkbox" package="">
+            <categories>
+                <category handle="newsletter_subscriber"/>
+            </categories>
+        </attributetype>
+        <attributetype handle="date_time" name="Date/Time" package="">
+            <categories>
+                <category handle="newsletter_subscriber"/>
+            </categories>
+        </attributetype>
+        <attributetype handle="number" name="Number" package="">
+            <categories>
+                <category handle="newsletter_subscriber"/>
+            </categories>
+        </attributetype>
+        <attributetype handle="select" name="Option List" package="">
+            <categories>
+                <category handle="newsletter_subscriber"/>
+            </categories>
+        </attributetype>
+        <attributetype handle="address" name="Address" package="">
+            <categories>
+                <category handle="newsletter_subscriber"/>
+            </categories>
+        </attributetype>
+        <attributetype handle="telephone" name="Phone Number" package="">
+            <categories>
+                <category handle="newsletter_subscriber"/>
+            </categories>
+        </attributetype>
+        <attributetype handle="url" name="URL" package="">
+            <categories>
+                <category handle="newsletter_subscriber"/>
+            </categories>
+        </attributetype>
+    </attributetypes>
+</concrete5-cif>

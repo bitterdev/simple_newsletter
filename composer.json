@@ -1,0 +1,8 @@
+{
+  "name": "bitter/simple_newsletter",
+  "type": "concrete5-package",
+  "autoload": {
+    "psr-4": {
+      "Bitter\\SimpleNewsletter\\": "src/Bitter/SimpleNewsletter"
+    }
+}

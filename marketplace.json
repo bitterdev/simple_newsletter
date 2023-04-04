@@ -1,0 +1,21 @@
+{
+  "title": "Simple Newsletter",
+  "supportHostedOffsite": true,
+  "supportHostedOffsiteUrl": "https://www.bitter.de/support",
+  "singlePrice": 85,
+  "skillLevel": "Beginner",
+  "keywords": "fabian bitter, newsletter, campaign, campaigns, mailing lists, mailing list, lists, list, email, mail, subscribe, subscriber, subscription, unsubscribe, unsubscriber, unsubscription, form, integration, service",
+  "shortDescription": "Powerful standalone newsletter solution that fully complies with GDPR.",
+  "categories": [16, 1273, 50],
+  "supportPlan": 12,
+  "screenshots": [
+      "https://bitter.de/public/6016/0727/4635/1.jpg",
+      "https://bitter.de/public/6216/0727/4637/2.jpg",
+      "https://bitter.de/public/7016/0727/4638/3.jpg",
+      "https://bitter.de/public/3516/0727/4640/4.jpg",
+      "https://bitter.de/public/6416/0727/4642/5.jpg",
+      "https://bitter.de/public/3516/0727/4641/6.jpg",
+      "https://bitter.de/public/8716/0727/4643/7.jpg",
+      "https://bitter.de/public/1416/0727/4645/8.jpg"
+  ],
+}

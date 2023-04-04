@@ -1,0 +1,46 @@
+Version 1.2.5
+==================================================
+- Maky fully V9 compatible
+
+Version 1.2.0
+==================================================
+- Make working with V9 (need to rewrite the job ton task intead)
+
+Version 1.1.1
+==================================================
+- Fix issue with storing checkbox values from block type settings
+
+Version 1.1.0
+==================================================
+- Add new support system in help dialog
+
+Version 1.0.0
+==================================================
+- Hide mailing list selection in block types when only one mailing list is available
+
+Version 0.9.6
+==================================================
+- Added danish translation (thanks to Allan Østergreen / aloweb.dk)
+- Added german translation
+
+Version 0.9.5
+==================================================
+- Fix bug in unsubscribe method
+
+Version 0.9.4
+==================================================
+- Fix typo
+- Auto fill email address when clicking ob unsubscribe link
+- Remove subscribers from database when they have unsubscribed from all mailing lists
+
+Version 0.9.3
+==================================================
+- Add startup error reporting to queueable job
+
+Version 0.9.2
+==================================================
+- Add plaintext support with simple html converter
+
+Version 0.9.0
+==================================================
+- Submitted to PRB

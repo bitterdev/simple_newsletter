@@ -1,0 +1,890 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: simple_newsletter 1.2.7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-30T11:29:59+01:00\n"
+"PO-Revision-Date: 2023-01-30 11:30+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.2.2\n"
+
+#: packages/simple_newsletter/install.xml:8
+msgctxt "BlockTypeSetName"
+msgid "Simple Newsletter"
+msgstr "Simple Newsletter"
+
+#: packages/simple_newsletter/install.xml:18
+#: packages/simple_newsletter/controller.php:35
+msgid "Simple Newsletter"
+msgstr "Simple Newsletter"
+
+#: packages/simple_newsletter/install.xml:20
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: packages/simple_newsletter/install.xml:22
+msgid "Mailing Lists"
+msgstr "Verteilerlisten"
+
+#: packages/simple_newsletter/install.xml:24
+msgid "Campaigns"
+msgstr "Kampagnen"
+
+#: packages/simple_newsletter/install.xml:26
+msgid "Subscribers"
+msgstr "Abonnenten"
+
+#: packages/simple_newsletter/install.xml:28
+#: packages/simple_newsletter/elements/dashboard/simple_newsletter/subscribers/header.php:19
+msgid "Attributes"
+msgstr "Attribute"
+
+#: packages/simple_newsletter/install.xml:34
+msgctxt "AttributeTypeName"
+msgid "Text"
+msgstr "Text"
+
+#: packages/simple_newsletter/install.xml:39
+msgctxt "AttributeTypeName"
+msgid "Text Area"
+msgstr "Textbereich"
+
+#: packages/simple_newsletter/install.xml:44
+msgctxt "AttributeTypeName"
+msgid "Checkbox"
+msgstr "Kontrollkästchen"
+
+#: packages/simple_newsletter/install.xml:49
+msgctxt "AttributeTypeName"
+msgid "Date/Time"
+msgstr "Datum/Zeit"
+
+#: packages/simple_newsletter/install.xml:54
+msgctxt "AttributeTypeName"
+msgid "Number"
+msgstr "Zahl"
+
+#: packages/simple_newsletter/install.xml:59
+msgctxt "AttributeTypeName"
+msgid "Option List"
+msgstr "Auswahlliste"
+
+#: packages/simple_newsletter/install.xml:64
+msgctxt "AttributeTypeName"
+msgid "Address"
+msgstr "Adresse"
+
+#: packages/simple_newsletter/install.xml:69
+msgctxt "AttributeTypeName"
+msgid "Phone Number"
+msgstr "Telefonnummer"
+
+#: packages/simple_newsletter/install.xml:74
+msgctxt "AttributeTypeName"
+msgid "URL"
+msgstr "URL"
+
+#: packages/simple_newsletter/controller.php:30
+msgid "Powerful standalone newsletter solution that fully complies with GDPR."
+msgstr "Leistungsstarke eigenständige Newsletter-Lösung die die Vorgaben der DSGVO vollständig erfüllt."
+
+#: packages/simple_newsletter/blocks/unsubscribe_form/controller.php:66
+msgid "Add unsubscribe newsletter subscribe form."
+msgstr "Newsletter-Abmeldeformular hinzufügen."
+
+#: packages/simple_newsletter/blocks/unsubscribe_form/controller.php:71
+msgid "Unsubscribe Form"
+msgstr "Abmeldeformular"
+
+#: packages/simple_newsletter/blocks/unsubscribe_form/controller.php:87
+#: packages/simple_newsletter/blocks/subscribe_form/controller.php:91
+msgid "You need to enter a valid button text."
+msgstr "Sie müssen eine gültige Bezeichnung für die Schaltfläche eingeben."
+
+#: packages/simple_newsletter/blocks/unsubscribe_form/controller.php:105
+#: packages/simple_newsletter/elements/newsletter_template.php:397
+msgid "Unsubscribe"
+msgstr "Abmelden"
+
+#: packages/simple_newsletter/blocks/unsubscribe_form/controller.php:131
+#: packages/simple_newsletter/blocks/subscribe_form/controller.php:175
+#: packages/simple_newsletter/controllers/single_page/dashboard/simple_newsletter/campaigns.php:206
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Service/Subscribe.php:189
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Service/Subscribe.php:236
+msgid "You need to select a valid mailing list."
+msgstr "Sie müssen eine gültige Verteilerliste auswählen."
+
+#: packages/simple_newsletter/blocks/unsubscribe_form/controller.php:133
+#: packages/simple_newsletter/blocks/subscribe_form/controller.php:177
+#: packages/simple_newsletter/controllers/single_page/dashboard/simple_newsletter/subscribers.php:247
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Service/Subscribe.php:127
+msgid "You need to enter a valid mail address."
+msgstr "Sue müssen eine gültige Email-Adresse eingeben."
+
+#: packages/simple_newsletter/blocks/unsubscribe_form/controller.php:140
+#: packages/simple_newsletter/blocks/subscribe_form/controller.php:192
+msgid "The given captcha is invalid."
+msgstr "Das eigegebene Captcha ist ungültig."
+
+#: packages/simple_newsletter/blocks/unsubscribe_form/controller.php:150
+msgid "Thank you. You was successfully removed from the selected mailing lists."
+msgstr "Vielen Dank. Sie wurden erfolgreich aus den ausgewählten Verteilerlisten entfernt."
+
+#: packages/simple_newsletter/blocks/unsubscribe_form/edit.php:28
+#: packages/simple_newsletter/blocks/subscribe_form/edit.php:28
+msgid "Button Text"
+msgstr "Schaltflächen Text"
+
+#: packages/simple_newsletter/blocks/unsubscribe_form/edit.php:35
+#: packages/simple_newsletter/blocks/subscribe_form/edit.php:49
+msgid "Display captcha"
+msgstr "Captcha anzeigen"
+
+#: packages/simple_newsletter/blocks/unsubscribe_form/view.php:74
+#: packages/simple_newsletter/blocks/subscribe_form/view.php:78
+msgid "mailing lists page"
+msgstr "Verteilerliste Seite"
+
+#: packages/simple_newsletter/blocks/unsubscribe_form/view.php:70
+#: packages/simple_newsletter/blocks/subscribe_form/view.php:74
+#, php-format
+msgid "No mailing lists available. Please go to the %s and create one."
+msgstr "Keine Verteilerlisten verfügbar. Gehen Sie zu %s und erstellen Sie eine."
+
+#: packages/simple_newsletter/blocks/unsubscribe_form/view.php:83
+msgid "Unsubscribe from"
+msgstr "Abmelden von"
+
+#: packages/simple_newsletter/blocks/unsubscribe_form/view.php:95
+#: packages/simple_newsletter/blocks/subscribe_form/view.php:99
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/subscribers/detail.php:46
+#: packages/simple_newsletter/views/dialogs/support/create_ticket.php:59
+msgid "E-Mail"
+msgstr "E-Mail"
+
+#: packages/simple_newsletter/blocks/subscribe_form/controller.php:76
+msgid "Add subscribe newsletter subscribe form."
+msgstr "Newsletter-Anmeldeformular hinzufügen."
+
+#: packages/simple_newsletter/blocks/subscribe_form/controller.php:81
+msgid "Subscribe Form"
+msgstr "Anmeldeformular"
+
+#: packages/simple_newsletter/blocks/subscribe_form/controller.php:125
+msgid "Subscribe"
+msgstr "Abonnieren"
+
+#: packages/simple_newsletter/blocks/subscribe_form/controller.php:152
+msgid "Thank you. Your newsletter subscription was successfully confirmed."
+msgstr "Vielen Dank. Ihr Newsletter-Abonnement wurde erfolgreich bestätigt."
+
+#: packages/simple_newsletter/blocks/subscribe_form/controller.php:180
+msgid "You need to accept the privacy."
+msgstr "Sie müssen die Datenschutzbestimmungen akzeptieren."
+
+#: packages/simple_newsletter/blocks/subscribe_form/controller.php:184
+msgid "You need to accept the terms of use."
+msgstr "Sie müssen die Nutzungsbedingungen akzeptieren."
+
+#: packages/simple_newsletter/blocks/subscribe_form/controller.php:243
+msgid "Thank you for your subscription. Please check your email inbox to confirm the subscription."
+msgstr "Vielen Dank für Ihr Abonnement. Bitte überprüfen Sie Ihren E-Mail-Posteingang um das Abonnement zu bestätigen."
+
+#: packages/simple_newsletter/blocks/subscribe_form/controller.php:245
+msgid "Thank you for your subscription. You have been successfully subscribed to the newsletter."
+msgstr "Vielen Dank für Ihr Abonnement. Sie haben den Newsletter erfolgreich abonniert."
+
+#: packages/simple_newsletter/blocks/subscribe_form/edit.php:35
+msgid "Display terms of use checkbox"
+msgstr "Kontrollkästchen für Nutzungsbedingungen anzeigen"
+
+#: packages/simple_newsletter/blocks/subscribe_form/edit.php:42
+msgid "Display privacy checkbox"
+msgstr "Kontrollkästchen für Datenschutz anzeigen"
+
+#: packages/simple_newsletter/blocks/subscribe_form/edit.php:60
+msgid "main settings"
+msgstr "Haupteinstellungen"
+
+#: packages/simple_newsletter/blocks/subscribe_form/edit.php:56
+#, php-format
+msgid "If you want to create a link to the terms of use and/or privacy page in the block view you need to setup the pages in the %s."
+msgstr "Wenn Sie einen Link zu den Nutzungsbedingungen und/oder zu der Datenschutzseite in der Blockansicht erstellen möchten, müssen Sie die Seiten in den %s hinterlegen."
+
+#: packages/simple_newsletter/blocks/subscribe_form/view.php:87
+msgid "Subscribe to"
+msgstr "Abonnieren von"
+
+#: packages/simple_newsletter/blocks/subscribe_form/view.php:117
+msgid "privacy policy"
+msgstr "Datenschutzbestimmungen"
+
+#: packages/simple_newsletter/blocks/subscribe_form/view.php:129
+#, php-format
+msgid "I hereby acknowledge that the data collected in this form will be stored for further use and deleted once my inquiry has been processed. Note: You can revoke your consent at any time by drop us an email. See more detailed information on how we use user-data in our %s."
+msgstr "Ich erkenne hiermit an, dass die in diesem Formular erhobenen Daten zur weiteren Verwendung gespeichert und gelöscht werden, sobald meine Anfrage bearbeitet wurde. Hinweis: Sie können Ihre Einwilligung jederzeit widerrufen, indem Sie uns eine E-Mail senden. Hier finden Sie detailliertere Informationen darüber, wie wir Benutzerdaten in unseren %s verwenden."
+
+#: packages/simple_newsletter/blocks/subscribe_form/view.php:143
+msgid "terms of use"
+msgstr "AGB"
+
+#: packages/simple_newsletter/blocks/subscribe_form/view.php:155
+#, php-format
+msgid "I accept the %s."
+msgstr "Ich akzeptiere die %s."
+
+#: packages/simple_newsletter/mail/campaign.php:54
+msgid "Copy the following link to the address bar of your browser to unsubscribe from this mailing list:"
+msgstr "Kopieren Sie den folgenden Link in die Adressleiste Ihres Browsers, um sich von dieser Mailingliste abzumelden:"
+
+#: packages/simple_newsletter/mail/confirm_subscription.php:18
+msgid "Confirm newsletter subscription"
+msgstr "Bestätigung der Newsletter-Anmeldung"
+
+#: packages/simple_newsletter/mail/confirm_subscription.php:20
+msgid "Hello,"
+msgstr "Hallo,"
+
+#: packages/simple_newsletter/mail/confirm_subscription.php:22
+msgid "thank you for your newsletter subscription."
+msgstr "vielen Dank für Ihr Newsletter-Abonnement."
+
+#: packages/simple_newsletter/mail/confirm_subscription.php:24
+msgid "To complete your subscription request, please click the confirmation link below."
+msgstr "Um Ihre Abonnementanfrage abzuschließen, klicken Sie bitte auf den untenstehenden Bestätigungslink."
+
+#: packages/simple_newsletter/mail/confirm_subscription.php:26
+msgid "If you can't click the confirmation link, please copy the link manually and paste it to the address bar of your browser."
+msgstr "Falls Sie nicht auf den Bestätigungslink klicken können, kopieren Sie den Link manuell und fügen Sie ihn in die Adressleiste Ihres Browsers ein."
+
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/mailing_lists/detail.php:32
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/campaigns/detail.php:35
+#: packages/simple_newsletter/views/dialogs/mailing_lists/bulk/delete.php:45
+#: packages/simple_newsletter/views/dialogs/campaigns/bulk/delete.php:45
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Campaign/Search/ColumnSet/Column/NameColumn.php:30
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Campaign/Search/Field/Field/NameField.php:32
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/MailingList/Search/ColumnSet/Column/NameColumn.php:30
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/MailingList/Search/Field/Field/NameField.php:32
+msgid "Name"
+msgstr "Name"
+
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/mailing_lists/detail.php:39
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/campaigns/detail.php:58
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/campaigns.php:176
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/mailing_lists.php:171
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/subscribers.php:171
+#: packages/simple_newsletter/views/dialogs/mailing_lists/bulk/delete.php:63
+#: packages/simple_newsletter/views/dialogs/support/create_ticket.php:85
+#: packages/simple_newsletter/views/dialogs/campaigns/bulk/delete.php:63
+#: packages/simple_newsletter/views/dialogs/subscribers/bulk/delete.php:63
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/mailing_lists/detail.php:43
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/campaigns/detail.php:62
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/subscribers/detail.php:86
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/settings.php:66
+msgid "Save"
+msgstr "Speichern"
+
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/campaigns/detail.php:40
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Campaign/Search/ColumnSet/Column/MailingListColumn.php:30
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Campaign/Search/Field/Field/MailingListField.php:33
+msgid "Mailing List"
+msgstr "Verteilerliste"
+
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/campaigns/detail.php:45
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Campaign/Search/ColumnSet/Column/SubjectColumn.php:30
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Campaign/Search/Field/Field/SubjectField.php:32
+msgid "Subject"
+msgstr "Betreff"
+
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/campaigns/detail.php:50
+msgid "Body"
+msgstr "Inhalt"
+
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/subscribers/detail.php:53
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Subscriber/Search/ColumnSet/Column/ConfirmedColumn.php:31
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Subscriber/Search/Field/Field/ConfirmedField.php:32
+msgid "Confirmed"
+msgstr "Bestätigt"
+
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/subscribers/detail.php:58
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Subscriber/Search/ColumnSet/Column/SubscribedMailingListColumn.php:33
+msgid "Subscribed Mailing Lists"
+msgstr "Abonnierte Verteilerlisten"
+
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/subscribers/detail.php:63
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Subscriber/Search/ColumnSet/Column/SubscribedAtColumn.php:31
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Subscriber/Search/Field/Field/SubscribedAtField.php:41
+msgid "Subscribed At"
+msgstr "Abonniert am"
+
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/subscribers/detail.php:68
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Subscriber/Search/ColumnSet/Column/ConfirmedAtColumn.php:31
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Subscriber/Search/Field/Field/ConfirmedAtField.php:41
+msgid "Confirmed At"
+msgstr "Bestätigt am"
+
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/subscribers/detail.php:82
+msgid "Back"
+msgstr "Zurück"
+
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/campaigns.php:50
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/mailing_lists.php:49
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/subscribers.php:49
+msgid "Toggle Dropdown"
+msgstr "Dropdown umschalten"
+
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/campaigns.php:147
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/campaigns.php:183
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/mailing_lists.php:142
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/mailing_lists.php:178
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/subscribers.php:142
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/subscribers.php:178
+#: packages/simple_newsletter/views/dialogs/mailing_lists/bulk/delete.php:67
+#: packages/simple_newsletter/views/dialogs/campaigns/bulk/delete.php:67
+#: packages/simple_newsletter/views/dialogs/subscribers/bulk/delete.php:67
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Campaign/Search/Menu/MenuFactory.php:27
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Campaign/Search/Menu/MenuFactory.php:30
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Subscriber/Search/Menu/MenuFactory.php:27
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Subscriber/Search/Menu/MenuFactory.php:30
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/MailingList/Search/Menu/MenuFactory.php:27
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/MailingList/Search/Menu/MenuFactory.php:30
+msgid "Delete"
+msgstr "Löschen"
+
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/campaigns.php:166
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/mailing_lists.php:161
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/subscribers.php:161
+msgid "Are you sure?"
+msgstr "Sind Sie sicher?"
+
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/campaigns.php:169
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/mailing_lists.php:164
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/subscribers.php:164
+msgid "Confirm"
+msgstr "Bestätigen"
+
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/settings.php:39
+msgid "Legal information"
+msgstr "Rechtliche Information"
+
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/settings.php:40
+msgid "Your companies name with address in one line..."
+msgstr "Ihr Firmenname mit Adresse in einer Zeile..."
+
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/settings.php:44
+msgid "Subscription method"
+msgstr "Abonnementmethode"
+
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/settings.php:49
+msgid "Privacy page"
+msgstr "Datenschutz-Seite"
+
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/settings.php:54
+msgid "Terms of use page"
+msgstr "AGB-Seite"
+
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/settings.php:59
+msgid "Unsubscribe page"
+msgstr "Abmelde-Seite"
+
+#: packages/simple_newsletter/single_pages/dashboard/simple_newsletter/settings.php:59
+msgid "You need to embed the unsubscribe block type to a page of your choice and select the page here. This page is required to generate the opt-out-url in the newsletters footer."
+msgstr "Sie müssen den Abmelde-Blocktyp auf eine Seite Ihrer Wahl einbetten und die Seite hier auswählen. Diese Seite ist erforderlich, um die Opt-out-URL in der Newsletter-Fußzeile zu generieren."
+
+#: packages/simple_newsletter/elements/dashboard/simple_newsletter/mailing_lists/header.php:19
+#: packages/simple_newsletter/elements/dashboard/simple_newsletter/campaigns/header.php:19
+msgid "Add"
+msgstr "Hinzufügen"
+
+#: packages/simple_newsletter/elements/mailing_lists/search/menu.php:38
+#: packages/simple_newsletter/elements/campaigns/search/menu.php:38
+#: packages/simple_newsletter/elements/subscribers/search/menu.php:38
+msgid "Items per page"
+msgstr "Elemente pro Seite"
+
+#: packages/simple_newsletter/elements/mailing_lists/search/menu.php:62
+msgid "Add Mailing List"
+msgstr "Verteilerliste hinzufügen"
+
+#: packages/simple_newsletter/elements/mailing_lists/search/menu.php:68
+#: packages/simple_newsletter/elements/campaigns/search/menu.php:68
+#: packages/simple_newsletter/elements/subscribers/search/menu.php:74
+msgid "Get Help"
+msgstr "Hilfe"
+
+#: packages/simple_newsletter/elements/mailing_lists/search/menu.php:82
+#: packages/simple_newsletter/elements/campaigns/search/menu.php:82
+#: packages/simple_newsletter/elements/subscribers/search/menu.php:88
+msgid "Support"
+msgstr "Support"
+
+#: packages/simple_newsletter/elements/mailing_lists/search/search.php:24
+#: packages/simple_newsletter/elements/mailing_lists/search/search.php:36
+#: packages/simple_newsletter/elements/campaigns/search/search.php:24
+#: packages/simple_newsletter/elements/campaigns/search/search.php:36
+#: packages/simple_newsletter/elements/subscribers/search/search.php:24
+#: packages/simple_newsletter/elements/subscribers/search/search.php:36
+msgid "Advanced"
+msgstr "Erweitert"
+
+#: packages/simple_newsletter/elements/mailing_lists/search/search.php:42
+#: packages/simple_newsletter/elements/campaigns/search/search.php:42
+#: packages/simple_newsletter/elements/subscribers/search/search.php:42
+msgid "Search"
+msgstr "Suche"
+
+#: packages/simple_newsletter/elements/campaigns/search/menu.php:62
+msgid "Add Campaign"
+msgstr "Kampagne hinzufügen"
+
+#: packages/simple_newsletter/elements/subscribers/search/menu.php:62
+msgid "Add Subscriber"
+msgstr "Abonnent hinzufügen"
+
+#: packages/simple_newsletter/elements/subscribers/search/menu.php:68
+msgid "Manage Attributes"
+msgstr "Verwalten von Attributen"
+
+#: packages/simple_newsletter/elements/newsletter_template.php:395
+msgid "Don't like these emails?"
+msgstr "Sie mögen diese E-Mails nicht?"
+
+#: packages/simple_newsletter/controllers/single_page/dashboard/simple_newsletter/campaigns.php:207
+#: packages/simple_newsletter/controllers/single_page/dashboard/simple_newsletter/mailing_lists.php:201
+msgid "You need to enter a valid name."
+msgstr "Sie müssen einen gültigen Namen eingeben."
+
+#: packages/simple_newsletter/controllers/single_page/dashboard/simple_newsletter/campaigns.php:208
+msgid "You need to enter a valid subject."
+msgstr "Sie müssen ein gültiges Betreff eingeben."
+
+#: packages/simple_newsletter/controllers/single_page/dashboard/simple_newsletter/campaigns.php:209
+msgid "You need to enter a valid body."
+msgstr "Sie müssen einen gültigen Inhalt eingeben."
+
+#: packages/simple_newsletter/controllers/single_page/dashboard/simple_newsletter/campaigns.php:253
+msgid "You can't add any campaign because you don't have any mailing lists. Please create a mailing list first."
+msgstr "Sie können keine Kampagne hinzufügen, da Sie noch keine Verteilerlisten haben. Bitte erstellen Sie zuerst eine Verteilerliste."
+
+#: packages/simple_newsletter/controllers/single_page/dashboard/simple_newsletter/campaigns.php:259
+msgid "The campaign was added successfully."
+msgstr "Die Kampagne wurde erfolgreich hinzugefügt."
+
+#: packages/simple_newsletter/controllers/single_page/dashboard/simple_newsletter/campaigns.php:288
+#: packages/simple_newsletter/controllers/single_page/dashboard/simple_newsletter/campaigns.php:331
+#: packages/simple_newsletter/controllers/single_page/dashboard/simple_newsletter/campaigns.php:353
+#: packages/simple_newsletter/controllers/single_page/dashboard/simple_newsletter/campaigns.php:366
+#: packages/simple_newsletter/controllers/single_page/dashboard/simple_newsletter/mailing_lists.php:248
+#: packages/simple_newsletter/controllers/single_page/dashboard/simple_newsletter/mailing_lists.php:282
+#: packages/simple_newsletter/controllers/single_page/dashboard/simple_newsletter/subscribers.php:238
+#: packages/simple_newsletter/controllers/single_page/dashboard/simple_newsletter/subscribers.php:401
+msgid "Not Found"
+msgstr "Nicht gefunden"
+
+#: packages/simple_newsletter/controllers/single_page/dashboard/simple_newsletter/campaigns.php:299
+msgid "The campaign was updated successfully."
+msgstr "Die Kampagne wurde erfolgreich aktualisiert."
+
+#: packages/simple_newsletter/controllers/single_page/dashboard/simple_newsletter/campaigns.php:305
+msgid "The campaign was duplicated successfully."
+msgstr "Die Kampagne wurde erfolgreich dupliziert."
+
+#: packages/simple_newsletter/controllers/single_page/dashboard/simple_newsletter/campaigns.php:311
+msgid "The campaign was removed successfully."
+msgstr "Die Kampagne wurde erfolgreich entfernt."
+
+#: packages/simple_newsletter/controllers/single_page/dashboard/simple_newsletter/campaigns.php:317
+msgid "The campaign was successfully added to the send queue. Navigate to the dashboard page automated jobs and run the send newsletters job to send the campaign to all subscribers of the assosiated mailing list."
+msgstr "Die Kampagne wurde erfolgreich zur Sendewarteschlange hinzugefügt. Navigieren Sie zur Dashboard-Seite automatisierte Aufträge und führen Sie den Newsletter Senden Auftrag aus, um die Kampagne an alle Abonnenten der hinterlegten Verteilerliste zu senden."
+
+#: packages/simple_newsletter/controllers/single_page/dashboard/simple_newsletter/mailing_lists.php:228
+msgid "The mailing list was added successfully."
+msgstr "Die Verteilerliste wurde erfolgreich hinzugefügt."
+
+#: packages/simple_newsletter/controllers/single_page/dashboard/simple_newsletter/mailing_lists.php:258
+msgid "The mailing list was updated successfully."
+msgstr "Die Verteilerliste wurde erfolgreich aktualisiert."
+
+#: packages/simple_newsletter/controllers/single_page/dashboard/simple_newsletter/mailing_lists.php:264
+msgid "The mailing list was removed successfully."
+msgstr "Die Verteilerliste wurde erfolgreich entfernt."
+
+#: packages/simple_newsletter/controllers/single_page/dashboard/simple_newsletter/settings.php:43
+msgid "You need to enter your legal informations."
+msgstr "Sie müssen Ihre rechtlichen Informationen eingeben."
+
+#: packages/simple_newsletter/controllers/single_page/dashboard/simple_newsletter/settings.php:44
+msgid "You need to select a unsubscription page."
+msgstr "Sie müssen eine Abmelde-Seite auswählen."
+
+#: packages/simple_newsletter/controllers/single_page/dashboard/simple_newsletter/settings.php:57
+msgid "The settings has been updated successfully."
+msgstr "Die Einstellungen wurden erfolgreich aktualisiert."
+
+#: packages/simple_newsletter/controllers/single_page/dashboard/simple_newsletter/subscribers.php:211
+msgid "The subscriber has been removed successfully."
+msgstr "Der Abonnent wurde erfolgreich entfernt."
+
+#: packages/simple_newsletter/controllers/single_page/dashboard/simple_newsletter/subscribers.php:259
+msgid "The subscriber has been updated successfully."
+msgstr "Der Abonnent wurde erfolgreich aktualisiert."
+
+#: packages/simple_newsletter/controllers/single_page/dashboard/simple_newsletter/subscribers.php:265
+msgid "The subscriber has been added successfully."
+msgstr "Der Abonnent wurde erfolgreich hinzugefügt."
+
+#: packages/simple_newsletter/controllers/dialog/mailing_lists/bulk/delete.php:59
+#: packages/simple_newsletter/controllers/dialog/campaigns/bulk/delete.php:59
+#: packages/simple_newsletter/controllers/dialog/subscribers/bulk/delete.php:59
+msgid "Invalid Token"
+msgstr "Ungültiger Token"
+
+#: packages/simple_newsletter/controllers/dialog/mailing_lists/bulk/delete.php:82
+#, php-format
+msgid "%s mailing list deleted"
+msgid_plural "%s mailing lists deleted"
+msgstr[0] "%s Mailingliste gelöscht"
+msgstr[1] "%s Mailinglisten gelöscht"
+
+#: packages/simple_newsletter/controllers/dialog/mailing_lists/bulk/delete.php:83
+msgid "Mailing Lists Deleted"
+msgstr "Mailinglisten gelöscht"
+
+#: packages/simple_newsletter/controllers/dialog/support/create_ticket.php:56
+msgid "Ticket Created"
+msgstr "Ticket erstellt"
+
+#: packages/simple_newsletter/controllers/dialog/support/create_ticket.php:57
+msgid "Your ticket has been successfully created."
+msgstr "Ihr Ticket wurde erfolgreich erstellt."
+
+#: packages/simple_newsletter/controllers/dialog/campaigns/bulk/delete.php:82
+#, php-format
+msgid "%s campaign deleted"
+msgid_plural "%s campaigns deleted"
+msgstr[0] "%s Kampagne gelöscht"
+msgstr[1] "%s Kampagnen gelöscht"
+
+#: packages/simple_newsletter/controllers/dialog/campaigns/bulk/delete.php:83
+msgid "Campaigns Deleted"
+msgstr "Kampagnen gelöscht"
+
+#: packages/simple_newsletter/controllers/dialog/subscribers/bulk/delete.php:90
+#, php-format
+msgid "%s subscriber deleted"
+msgid_plural "%s subscribers deleted"
+msgstr[0] "%s Abonnent gelöscht"
+msgstr[1] "%s Abonnenten gelöscht"
+
+#: packages/simple_newsletter/controllers/dialog/subscribers/bulk/delete.php:91
+msgid "Subscribers Deleted"
+msgstr "Gelöschte Abonnenten"
+
+#: packages/simple_newsletter/views/dialogs/mailing_lists/bulk/delete.php:28
+msgid "No mailing lists are eligible for this operation"
+msgstr "Für diesen Vorgang sind keine Mailinglisten berechtigt"
+
+#: packages/simple_newsletter/views/dialogs/mailing_lists/bulk/delete.php:32
+msgid "Are you sure you would like to delete the following mailing lists?"
+msgstr "Möchten Sie die folgenden Mailinglisten wirklich löschen?"
+
+#: packages/simple_newsletter/views/dialogs/support/create_ticket.php:22
+msgid "Bug"
+msgstr "Fehler"
+
+#: packages/simple_newsletter/views/dialogs/support/create_ticket.php:23
+msgid "Enhancement"
+msgstr "Verbesserung"
+
+#: packages/simple_newsletter/views/dialogs/support/create_ticket.php:24
+msgid "Proposal"
+msgstr "Vorschlag"
+
+#: packages/simple_newsletter/views/dialogs/support/create_ticket.php:25
+msgid "Task"
+msgstr "Aufgabe"
+
+#: packages/simple_newsletter/views/dialogs/support/create_ticket.php:29
+msgid "Trivial"
+msgstr "Trivial"
+
+#: packages/simple_newsletter/views/dialogs/support/create_ticket.php:30
+msgid "Minor"
+msgstr "Geringfügig"
+
+#: packages/simple_newsletter/views/dialogs/support/create_ticket.php:31
+msgid "Major"
+msgstr "Schwer"
+
+#: packages/simple_newsletter/views/dialogs/support/create_ticket.php:32
+msgid "Critical"
+msgstr "Kritisch"
+
+#: packages/simple_newsletter/views/dialogs/support/create_ticket.php:33
+msgid "Blocker"
+msgstr "Blocker"
+
+#: packages/simple_newsletter/views/dialogs/support/create_ticket.php:64
+msgid "Title"
+msgstr "Titel"
+
+#: packages/simple_newsletter/views/dialogs/support/create_ticket.php:69
+msgid "Content"
+msgstr "Inhalt"
+
+#: packages/simple_newsletter/views/dialogs/support/create_ticket.php:74
+msgid "Type"
+msgstr "Typ"
+
+#: packages/simple_newsletter/views/dialogs/support/create_ticket.php:79
+msgid "Priority"
+msgstr "Priorität"
+
+#: packages/simple_newsletter/views/dialogs/support/create_ticket.php:89
+msgid "Create Ticket"
+msgstr "Ticket erstellen"
+
+#: packages/simple_newsletter/views/dialogs/campaigns/bulk/delete.php:28
+msgid "No campaigns are eligible for this operation"
+msgstr "Für diesen Vorgang sind keine Kampagnen förderfähig."
+
+#: packages/simple_newsletter/views/dialogs/campaigns/bulk/delete.php:32
+msgid "Are you sure you would like to delete the following campaigns?"
+msgstr "Möchten Sie die folgenden Kampagnen wirklich löschen?"
+
+#: packages/simple_newsletter/views/dialogs/subscribers/bulk/delete.php:28
+msgid "No subscribers are eligible for this operation"
+msgstr "Kein Teilnehmer ist für diesen Vorgang berechtigt"
+
+#: packages/simple_newsletter/views/dialogs/subscribers/bulk/delete.php:32
+msgid "Are you sure you would like to delete the following subscribers?"
+msgstr "Sind Sie sicher, dass Sie die folgenden Abonnenten löschen möchten?"
+
+#: packages/simple_newsletter/views/dialogs/subscribers/bulk/delete.php:45
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Subscriber/Search/ColumnSet/Column/EmailColumn.php:31
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Subscriber/Search/Field/Field/EmailField.php:32
+msgid "Email"
+msgstr "E-Mail"
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Form/Service/Validation.php:32
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Form/Service/Validation.php:41
+#, php-format
+msgid "Field \"%s\" is invalid"
+msgstr "Feld \"%s\" ist ungültig"
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Validator/MailingListValidator.php:37
+msgid "The given mailing list does not exists."
+msgstr "Die angegebene Verteilerliste ist nicht vorhanden."
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Validator/PageValidator.php:23
+msgid "Invalid type supplied to validator."
+msgstr "Ungültiger Typ, der dem Validator angegeben wird."
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Validator/PageValidator.php:29
+msgid "The given page is not valid."
+msgstr "Die angegebene Seite ist ungültig."
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Provider/ServiceProvider.php:87
+msgid "Newsletter placeholders"
+msgstr "Newsletter Platzhalter"
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Campaign/Search/ColumnSet/Column/CreatedAtColumn.php:31
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Campaign/Search/Field/Field/CreatedAtField.php:40
+msgid "Created At"
+msgstr "Erstellt am"
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Campaign/Search/ColumnSet/Column/SentAtColumn.php:31
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Campaign/Search/Field/Field/SentAtField.php:40
+msgid "Sent At"
+msgstr "Gesendet am"
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Campaign/Search/ColumnSet/Column/StateColumn.php:30
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Campaign/Search/Field/Field/StateField.php:33
+msgid "State"
+msgstr "Status"
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Campaign/Search/ColumnSet/Available.php:40
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Campaign/Search/Field/Field/StateField.php:44
+msgid "Sent"
+msgstr "Gesendet"
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Campaign/Search/ColumnSet/Available.php:41
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Campaign/Search/Field/Field/StateField.php:45
+msgid "Draft"
+msgstr "Entwurf"
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Campaign/Search/ColumnSet/Available.php:42
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Campaign/Search/Field/Field/StateField.php:46
+msgid "Queued"
+msgstr "In Warteschlange angereiht"
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Campaign/Search/ColumnSet/Available.php:76
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Campaign/Search/ColumnSet/Available.php:93
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Subscriber/Search/ColumnSet/Available.php:38
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Subscriber/Search/ColumnSet/Available.php:77
+msgid "None"
+msgstr "Keine"
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Campaign/Search/Field/Field/CreatedAtField.php:49
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Campaign/Search/Field/Field/SentAtField.php:49
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Subscriber/Search/Field/Field/ConfirmedAtField.php:50
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Subscriber/Search/Field/Field/SubscribedAtField.php:50
+msgid "to"
+msgstr "bis"
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Campaign/Search/Field/Manager.php:27
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Subscriber/Search/Field/Manager.php:34
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/MailingList/Search/Field/Manager.php:22
+msgid "Core Properties"
+msgstr "Kerneigenschaften"
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Campaign/Menu.php:30
+msgid "Add to queue"
+msgstr "Zur Warteschlange hinzufügen"
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Campaign/Menu.php:37
+msgid "Duplicate"
+msgstr "Duplizieren"
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Campaign/Menu.php:45
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Subscriber/Menu.php:29
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/MailingList/Menu.php:29
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Campaign/Menu.php:53
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Subscriber/Menu.php:36
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/MailingList/Menu.php:36
+msgid "Remove"
+msgstr "Entfernen"
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Command/Task/Controller/SendNewsletterController.php:20
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Command/Task/Controller/SendNewsletterController.php:33
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Command/Task/Controller/SendNewsletterController.php:43
+msgid "Send Newsletter"
+msgstr "Newsletter senden"
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Command/Task/Controller/SendNewsletterController.php:25
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Console/Command/SendNewsletter.php:26
+msgid "Send the queued newsletter campaigns."
+msgstr "Senden Sie die Newsletterkampagnen in der Warteschlange."
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Subscriber/Search/ColumnSet/Available.php:49
+msgid "Yes"
+msgstr "Ja"
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Subscriber/Search/ColumnSet/Available.php:51
+msgid "No"
+msgstr "Nein"
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Subscriber/Search/Field/Field/ConfirmedField.php:42
+msgid "Unconfirmed Subscribers"
+msgstr "Unbestätigte Abonnenten"
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Subscriber/Search/Field/Field/ConfirmedField.php:43
+msgid "Confirmed Subscribers"
+msgstr "Bestätigte Abonnenten"
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Subscriber/Search/Field/Field/SubscribedMailingListField.php:33
+msgid "Subscribed Mailing List"
+msgstr "Abonnierte Mailinglisten"
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Service/Sender.php:72
+#, php-format
+msgid "Added campaign %s to send queue with %s subscribers."
+msgstr "Kampagne %s wurde hinzugefügt, um eine Warteschlange mit %s-Abonnenten zu senden."
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Service/Sender.php:77
+msgid "There are no subscribers available in the campaigns associated mailing lists."
+msgstr "In den zugeordneten Verteilerlisten der Kampagnen sind keine Abonnenten verfügbar."
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Service/Sender.php:80
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Service/Sender.php:168
+msgid "There are no campaigns in the send queue."
+msgstr "Es sind keine Kampagnen in der Sendewarteschlange vorhanden."
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Service/Sender.php:116
+#, php-format
+msgid "Campaign %s was sent to subscriber with mail address %s."
+msgstr "Kampagne %s wurde an den Abonnenten mit der E-Mail-Adresse %s gesendet."
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Service/Sender.php:118
+#, php-format
+msgid "Error while sending campaign %s to subscriber with mail address %s."
+msgstr "Fehler beim Senden von Kampagne %s an Abonnenten mit E-Mail-Adresse %s."
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Service/Sender.php:125
+msgid "Invalid queue item."
+msgstr "Ungültiges Warteschlangenelement."
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Service/Sender.php:164
+#, php-format
+msgid "Campaign %s was sent successfully to all subscribers of the associated mailing list."
+msgstr "Kampagne %s wurde erfolgreich an alle Abonnenten der zugehörigen Verteilerlisten gesendet."
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Service/Subscribe.php:86
+#, php-format
+msgid "Newsletter subscriber with mail address %s was confirmed."
+msgstr "Newsletter-Abonnent mit E-Mail-Adresse %s wurde bestätigt."
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Service/Subscribe.php:88
+msgid "No newsletter subscriber was found by the given URL. Maybe the link is invalidated or you already have confirmed your subscription."
+msgstr "Unter der angegebene URL wurde kein Newsletter-Abonnent gefunden. Möglicherweise ist der Link ungültig oder Sie haben Ihr Abonnement bereits bestätigt."
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Service/Subscribe.php:125
+#, php-format
+msgid "New newsletter subscriber added with mail address %s."
+msgstr "Neuer Newsletter-Abonnent mit E-Mail-Adresse %s hinzugefügt."
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Service/Subscribe.php:157
+#, php-format
+msgid "Sent confirmation mail to %s."
+msgstr "Bestätigungsmail am %s gesendet."
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Service/Subscribe.php:159
+#, php-format
+msgid "Error while sending confirmation mail to %s."
+msgstr "Fehler beim Senden der Bestätigungsmails an %s."
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Service/Subscribe.php:160
+msgid "Error while sending the confirmation mail."
+msgstr "Fehler beim Senden der Bestätigungsmail."
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Service/Subscribe.php:186
+#, php-format
+msgid "Newsletter subscriber with mail address %s added to mailing list %s."
+msgstr "Newsletter-Abonnent mit E-Mail-Adresse %s zur Verteilerliste %s hinzugefügt."
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Service/Subscribe.php:211
+msgid "The mail address is unknown."
+msgstr "Die E-Mail-Adresse ist unbekannt."
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Service/Subscribe.php:230
+#, php-format
+msgid "Newsletter subscriber with mail address %s removed from mailing list %s."
+msgstr "Newsletter-Abonnent mit E-Mail-Adresse %s aus der Mailingliste %s entfernt."
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Service/Subscribe.php:233
+#, php-format
+msgid "The mail address is not associated with the mailing list %s."
+msgstr "Die E-Mail-Adresse ist der Verteilerliste %s nicht zugeordnet."
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Console/Command/SendNewsletter.php:40
+msgid "All newsletter campaigns were sent successfully."
+msgstr "Alle Newsletter-Kampagnen wurden erfolgreich versendet."
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Config.php:64
+msgid "Single-Opt-In"
+msgstr "Single-Opt-In"
+
+#: packages/simple_newsletter/src/Bitter/SimpleNewsletter/Config.php:65
+msgid "Double-Opt-In"
+msgstr "Double-Opt-In"
