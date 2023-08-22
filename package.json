@@ -1,15 +1,6 @@
 {
-  "name": "simple_live_chat",
+  "name": "simple_newsletter",
   "version": "1.0.0",
-  "description": "Powerful standalone newsletter solution that fully complies with GDPR.",
-  "main": "controller.php",
-  "directories": {
-    "doc": "docs"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bitterdev/simple_newsletter.git"
-  },
   "author": "Fabian Bitter",
   "homepage": "https://www.bitter.de",
   "devDependencies": {
