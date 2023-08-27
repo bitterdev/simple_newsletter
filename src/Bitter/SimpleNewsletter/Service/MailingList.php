@@ -13,6 +13,7 @@ namespace Bitter\SimpleNewsletter\Service;
 use Bitter\SimpleNewsletter\Entity\MailingList as MailingListEntity;
 use Concrete\Core\Application\ApplicationAwareInterface;
 use Concrete\Core\Application\ApplicationAwareTrait;
+use Concrete\Core\Site\Service;
 use Doctrine\ORM\EntityManagerInterface;
 
 class MailingList implements ApplicationAwareInterface
@@ -45,6 +46,25 @@ class MailingList implements ApplicationAwareInterface
 
         /** @var MailingListEntity[] $entries */
         $entries = $this->entityManager->getRepository(MailingListEntity::class)->findAll();
+
+        foreach ($entries as $entry) {
+            if ($entry instanceof MailingListEntity) {
+                $list[$entry->getId()] = $entry->getName();
+            }
+        }
+
+        return $list;
+    }
+
+    public function getListByCurrentSite()
+    {
+        $list = [];
+
+        /** @var Service $siteService */
+        $siteService = $this->app->make(Service::class);
+        $site = $siteService->getSite();
+        /** @var MailingListEntity[] $entries */
+        $entries = $this->entityManager->getRepository(MailingListEntity::class)->findBy(["site" => $site]);
 
         foreach ($entries as $entry) {
             if ($entry instanceof MailingListEntity) {

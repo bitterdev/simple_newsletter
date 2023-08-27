@@ -35,6 +35,14 @@ class MailingList
     protected $name;
 
     /**
+     * @ORM\ManyToOne(targetEntity="\Concrete\Core\Entity\Site\Site")
+     * @ORM\JoinColumn(name="siteID", referencedColumnName="siteID", onDelete="CASCADE")
+     *
+     * @var \Concrete\Core\Entity\Site\Site|null
+     */
+    protected $site = null;
+
+    /**
      * @var Collection|Subscriber[]
      *
      * @ORM\ManyToMany(targetEntity="Bitter\SimpleNewsletter\Entity\Subscriber", inversedBy="mailingLists")
@@ -124,6 +132,24 @@ class MailingList
     public function getSubscribers()
     {
         return $this->subscribers;
+    }
+
+    /**
+     * @return \Concrete\Core\Entity\Site\Site|null
+     */
+    public function getSite(): ?\Concrete\Core\Entity\Site\Site
+    {
+        return $this->site;
+    }
+
+    /**
+     * @param \Concrete\Core\Entity\Site\Site|null $site
+     * @return MailingList
+     */
+    public function setSite(?\Concrete\Core\Entity\Site\Site $site): MailingList
+    {
+        $this->site = $site;
+        return $this;
     }
 
 

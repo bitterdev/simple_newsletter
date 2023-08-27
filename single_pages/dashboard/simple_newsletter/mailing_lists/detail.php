@@ -17,6 +17,8 @@ use Concrete\Core\Support\Facade\Url;
 use Concrete\Core\Validation\CSRF\Token;
 use Concrete\Core\View\View;
 
+/** @var array $sites */
+
 $app = Application::getFacadeApplication();
 /** @var Form $form */
 $form = $app->make(Form::class);
@@ -25,12 +27,21 @@ $token = $app->make(Token::class);
 /** @var MailingList $mailingList */
 
 ?>
+    <div class="ccm-dashboard-header-buttons">
+        <?php \Concrete\Core\View\View::element("dashboard/help", [], "simple_newsletter"); ?>
+    </div>
+
     <form action="#" method="post">
         <?php echo $token->output("update_mailing_list"); ?>
 
         <div class="form-group">
             <?php echo $form->label("name", t("Name")); ?>
             <?php echo $form->text("name", $mailingList->getName()); ?>
+        </div>
+
+        <div class="form-group">
+            <?php echo $form->label("siteId", t("Site")); ?>
+            <?php echo $form->select("siteId", $sites, $mailingList->getSite() instanceof \Concrete\Core\Entity\Site\Site ? $mailingList->getSite()->getSiteID() : null); ?>
         </div>
 
         <div class="ccm-dashboard-form-actions-wrapper">

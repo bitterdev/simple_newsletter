@@ -48,7 +48,7 @@ class CreateTicket extends UserInterface
                 /** @noinspection PhpComposerExtensionStubsInspection */
                 $json = json_decode($rawData, true);
 
-                if ($json["error"]) {
+                if (isset($json["error"])) {
                     foreach ($json["errors"] as $errorMessage) {
                         $errorList->add($errorMessage);
                     }

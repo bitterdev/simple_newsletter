@@ -29,6 +29,7 @@ use Concrete\Core\Search\Query\QueryFactory;
 use Concrete\Core\Search\Query\QueryModifier;
 use Concrete\Core\Search\Result\Result;
 use Concrete\Core\Search\Result\ResultFactory;
+use Concrete\Core\Site\Service;
 use Concrete\Core\Support\Facade\Url;
 use Concrete\Package\SimpleNewsletter\Controller\Element\Dashboard\SimpleNewsletter\MailingLists\Header;
 use Doctrine\DBAL\Exception;
@@ -208,16 +209,35 @@ class MailingLists extends DashboardPageController
         }
     }
 
+    private function getSites(): array
+    {
+        $sites = [];
+
+        /** @var Service $siteService */
+        $siteService = $this->app->make(Service::class);
+
+        foreach($siteService->getList() as $site) {
+            $sites[$site->getSiteID()] = $site->getSiteName();
+        }
+
+        return $sites;
+    }
+
     public function add()
     {
         if ($this->request->getMethod() === "POST" && $this->validate()) {
             $mailingList = new MailingList();
             $mailingList->setName($this->request->request->get("name"));
+            /** @var Service $siteService */
+            $siteService = $this->app->make(Service::class);
+            $site = $siteService->getByID($this->request->request->get("siteId"));
+            $mailingList->setSite($site);
             $this->entityManager->persist($mailingList);
             $this->entityManager->flush();
             return $this->responseFactory->redirect((string)Url::to("/dashboard/simple_newsletter/mailing_lists/added"), Response::HTTP_TEMPORARY_REDIRECT);
         }
 
+        $this->set('sites', $this->getSites());
         $this->set('mailingList', new MailingList());
 
         $this->render("/dashboard/simple_newsletter/mailing_lists/detail", "simple_newsletter");
@@ -240,6 +260,10 @@ class MailingLists extends DashboardPageController
 
             if ($this->request->getMethod() === "POST" && $this->validate()) {
                 $mailingList->setName($this->request->request->get("name"));
+                /** @var Service $siteService */
+                $siteService = $this->app->make(Service::class);
+                $site = $siteService->getByID($this->request->request->get("siteId"));
+                $mailingList->setSite($site);
                 $this->entityManager->persist($mailingList);
                 $this->entityManager->flush();
                 return $this->responseFactory->redirect((string)Url::to("/dashboard/simple_newsletter/mailing_lists/updated"), Response::HTTP_TEMPORARY_REDIRECT);
@@ -248,6 +272,7 @@ class MailingLists extends DashboardPageController
             return $this->responseFactory->notFound(t("Not Found"));
         }
 
+        $this->set('sites', $this->getSites());
         $this->set('mailingList', $mailingList);
 
         $this->render("/dashboard/simple_newsletter/mailing_lists/detail", "simple_newsletter");

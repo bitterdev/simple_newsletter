@@ -1,22 +1,20 @@
 <?php
 
 /**
- * @project:   Simple Newsletter
+ * @project:   App Icon
  *
- * @author     Fabian Bitter (fabian@bitter.de)
- * @copyright  (C) 2023 Fabian Bitter (www.bitter.de)
- * @version    X.X.X
+ * @author     Fabian Bitter
+ * @copyright  (C) 2016 Fabian Bitter (www.bitter.de)
+ * @version    1.2.1
  */
 
 defined('C5_EXECUTE') or die('Access denied');
 
-use Concrete\Core\Captcha\CaptchaInterface;
-use Concrete\Core\Editor\EditorInterface;
 use Concrete\Core\Form\Service\Form;
 use Concrete\Core\Support\Facade\Application;
 use Concrete\Core\Support\Facade\Url;
 use Concrete\Core\User\User;
-use Concrete\Package\SimpleNewsletter\Controller\Dialog\Support\CreateTicket;
+use Concrete\Package\AppIcon\Controller\Dialog\Support\CreateTicket;
 
 $ticketTypes = [
     "bug" => t("Bug"),
@@ -41,10 +39,6 @@ $user = new User();
 $app = Application::getFacadeApplication();
 /** @var Form $form */
 $form = $app->make(Form::class);
-/** @var EditorInterface $editor */
-$editor = $app->make(EditorInterface::class);
-/** @var CaptchaInterface $captcha */
-$captcha = $app->make(CaptchaInterface::class);
 
 ?>
 
@@ -67,7 +61,7 @@ $captcha = $app->make(CaptchaInterface::class);
 
     <div class="form-group">
         <?php echo $form->label('content', t("Content")); ?>
-        <?php echo $editor->outputStandardEditor('content'); ?>
+        <?php echo $form->textarea('content'); ?>
     </div>
 
     <div class="form-group">
@@ -81,7 +75,7 @@ $captcha = $app->make(CaptchaInterface::class);
     </div>
 
     <div class="dialog-buttons">
-        <button class="btn btn-default pull-left" data-dialog-action="cancel">
+        <button class="btn btn-secondary float-start" data-dialog-action="cancel">
             <?php echo t('Cancel') ?>
         </button>
 

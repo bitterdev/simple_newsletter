@@ -21,6 +21,9 @@ use Concrete\Core\Support\Facade\Url;
 $app = Application::getFacadeApplication();
 /** @var Config $config */
 $config = $app->make(Config::class);
+if (isset($site)) {
+    $config->setSite($site);
+}
 ?>
 <!doctype html>
 <html>

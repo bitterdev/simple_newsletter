@@ -13,5 +13,12 @@ defined('C5_EXECUTE') or die('Access denied');
 use Concrete\Controller\Element\Attribute\KeyList;
 use Concrete\Core\View\View;
 
+?>
+
+<div class="ccm-dashboard-header-buttons">
+    <?php \Concrete\Core\View\View::element("dashboard/help", [], "simple_newsletter"); ?>
+</div>
+
+<?php
 /** @var KeyList $attributeView */
 $attributeView->render();

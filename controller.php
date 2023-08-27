@@ -19,7 +19,7 @@ use Concrete\Core\Database\EntityManager\Provider\StandardPackageProvider;
 class Controller extends Package implements ProviderAggregateInterface
 {
     protected $pkgHandle = 'simple_newsletter';
-    protected $pkgVersion = '1.2.7';
+    protected $pkgVersion = '1.5.0';
     protected $appVersionRequired = '8.0.0';
     protected $pkgAutoloaderRegistries = [
         'src/Bitter/SimpleNewsletter' => 'Bitter\SimpleNewsletter',

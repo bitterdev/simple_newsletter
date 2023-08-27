@@ -81,7 +81,7 @@ $config = $app->make(Config::class);
                     </p>
                 <?php elseif (count($mailingLists) === 1): ?>
                     <?php foreach ($mailingLists as $mailingListId => $mailingListLabel): ?>
-                        <?php echo $form->hidden("mailingList[" . $mailingListId . "]", 1); ?>
+                        <?php echo $form->hidden("mailingList[" . $mailingListId . "]", $mailingListId); ?>
                     <?php endforeach; ?>
                 <?php else: ?>
                     <?php echo $form->label("mailingList", t("Subscribe to")); ?>

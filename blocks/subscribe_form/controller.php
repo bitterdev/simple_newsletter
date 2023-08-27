@@ -97,7 +97,7 @@ class Controller extends BlockController
 
     public function setDefaults()
     {
-        $mailingLists = $this->mailingListService->getList();
+        $mailingLists = $this->mailingListService->getListByCurrentSite();
 
         $this->set('mailingLists', $mailingLists);
         $this->set('error', $this->error);

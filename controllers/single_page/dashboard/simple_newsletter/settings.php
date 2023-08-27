@@ -13,9 +13,9 @@ namespace Concrete\Package\SimpleNewsletter\Controller\SinglePage\Dashboard\Simp
 use Bitter\SimpleNewsletter\Config;
 use Bitter\SimpleNewsletter\Form\Service\Validation;
 use Concrete\Core\Http\Request;
-use Concrete\Core\Page\Controller\DashboardPageController;
+use Concrete\Core\Page\Controller\DashboardSitePageController;
 
-class Settings extends DashboardPageController
+class Settings extends DashboardSitePageController
 {
     /** @var Request */
     protected $request;
@@ -30,6 +30,7 @@ class Settings extends DashboardPageController
 
         $this->request = $this->app->make(Request::class);
         $this->config = $this->app->make(Config::class);
+        $this->config->setSite($this->getSite());
         $this->formValidator = $this->app->make(Validation::class);
     }
 

@@ -56,6 +56,6 @@ $body .=
 
 ob_start();
 /** @noinspection PhpUnhandledExceptionInspection */
-View::element("newsletter_template", ["subject" => $subject, "bodyHTML" => $bodyHTML, "email" => $subscriber->getEmail()], "simple_newsletter");
+View::element("newsletter_template", ["subject" => $subject, "bodyHTML" => $bodyHTML, "email" => $subscriber->getEmail(), "site" => $campaign->getMailingList()->getSite()], "simple_newsletter");
 $bodyHTML = ob_get_contents();
 ob_end_clean();

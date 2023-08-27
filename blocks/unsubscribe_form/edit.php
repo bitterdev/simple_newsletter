@@ -22,6 +22,7 @@ use Concrete\Core\View\View;
 /** @var BlockView $view */
 /** @var Form $form */
 
+\Concrete\Core\View\View::element("dashboard/help_blocktypes", [], "simple_newsletter");
 ?>
 
 <div class="form-group">

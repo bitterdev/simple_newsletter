@@ -38,6 +38,9 @@ $mailingListService = $app->make(MailingList::class);
 /** @var \Concrete\Core\Form\Service\Widget\DateTime $dateTime */
 $dateTime = $app->make(\Concrete\Core\Form\Service\Widget\DateTime::class);
 ?>
+    <div class="ccm-dashboard-header-buttons">
+        <?php \Concrete\Core\View\View::element("dashboard/help", [], "simple_newsletter"); ?>
+    </div>
 
     <form action="#" method="post">
         <?php echo $token->output("update_subscriber"); ?>
