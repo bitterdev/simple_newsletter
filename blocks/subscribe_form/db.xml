@@ -9,6 +9,9 @@
         <field name="buttonText" type="string" size="255">
             <notnull/>
         </field>
+        <field name="selectedMailingList" type="integer">
+            <unsigned/>
+        </field>
         <field name="displayCaptcha" type="boolean">
             <default value="1"/>
             <notnull/>

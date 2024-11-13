@@ -18,9 +18,12 @@ use Concrete\Core\View\View;
 /** @var string $buttonText */
 /** @var bool $displayCaptcha */
 /** @var bool $displayTermsOfUse */
+/** @var array $mailingLists */
+/** @var null|int $selectedMailingList */
 /** @var bool $displayPrivacy */
 /** @var BlockView $view */
 /** @var Form $form */
+$mailingLists = [0 => t("*** Please select")] + $mailingLists;
 
 \Concrete\Core\View\View::element("dashboard/help_blocktypes", [], "simple_newsletter");
 ?>
@@ -28,6 +31,12 @@ use Concrete\Core\View\View;
 <div class="form-group">
     <?php echo $form->label("buttonText", t('Button Text')); ?>
     <?php echo $form->text("buttonText", $buttonText, ["max-length" => 255]); ?>
+</div>
+
+
+<div class="form-group">
+    <?php echo $form->label("selectedMailingList", t('Selected Mailing List')); ?>
+    <?php echo $form->select("selectedMailingList", $mailingLists, $selectedMailingList); ?>
 </div>
 
 <div class="form-group">

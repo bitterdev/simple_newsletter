@@ -23,6 +23,7 @@ use Concrete\Core\Validation\CSRF\Token;
 use Concrete\Package\SimpleNewsletter\Block\SubscribeForm\Controller;
 use HtmlObject\Element;
 
+/** @var null|int $selectedMailingList */
 /** @var Renderer $renderer */
 /** @var NewsletterSubscriberKey[] $attributes */
 /** @var array $mailingLists */
@@ -44,6 +45,13 @@ $captcha = $app->make(CaptchaInterface::class);
 /** @var Config $config */
 $config = $app->make(Config::class);
 
+if (!empty($selectedMailingList)) {
+    foreach ($mailingLists as $mailingListId => $mailingListLabel) {
+        if ($mailingListId !== $selectedMailingList) {
+            unset($mailingLists[$mailingListId]);
+        }
+    }
+}
 ?>
 
 <div class="simple-newsletter-subscribe-block">
