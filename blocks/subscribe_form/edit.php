@@ -25,6 +25,8 @@ use Concrete\Core\View\View;
 /** @var Form $form */
 $mailingLists = [0 => t("*** Please select")] + $mailingLists;
 
+$selectedMailingList = $selectedMailingList ?? 0;
+
 \Concrete\Core\View\View::element("dashboard/help_blocktypes", [], "simple_newsletter");
 ?>
 
