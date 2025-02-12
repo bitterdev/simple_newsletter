@@ -30,6 +30,8 @@ use Concrete\Package\SimpleNewsletter\Block\SubscribeForm\Controller;
 /** @var string|bool $success */
 /** @var string $email */
 
+$email = $email ?? null;
+
 $app = Application::getFacadeApplication();
 /** @var Token $token */
 $token = $app->make(Token::class);
