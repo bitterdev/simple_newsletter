@@ -1,5 +1,6 @@
 {
   "name": "bitter/simple_newsletter",
+  "description": "Powerful standalone newsletter solution that fully complies with GDPR.",
   "type": "concrete5-package",
   "autoload": {
     "psr-4": {
