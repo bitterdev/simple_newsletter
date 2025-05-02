@@ -27,6 +27,7 @@ use Concrete\Core\Url\UrlImmutable;
 use Concrete\Core\Utility\Service\Identifier;
 use Concrete\Core\Validator\String\EmailValidator;
 use Doctrine\ORM\EntityManagerInterface;
+use League\Url\UrlInterface;
 use Symfony\Component\EventDispatcher\EventDispatcher;
 use Exception;
 use DateTime;
@@ -135,7 +136,7 @@ class Subscribe implements ApplicationAwareInterface
         if (!$errorList->has() &&
             $this->config->getSubscriptionMethod() === SubscriptionMethod::DOUBLE_OPT_IN &&
             !$subscriberEntry->isConfirmed() &&
-            $confirmationLink instanceof UrlImmutable) {
+            ($confirmationLink instanceof UrlImmutable || $confirmationLink instanceof UrlInterface)) {
 
             $confirmationHash = $this->idHelper->getString(32);
 
