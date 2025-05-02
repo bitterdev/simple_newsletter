@@ -10,6 +10,9 @@
 
 namespace Bitter\SimpleNewsletter;
 
+use Bitter\SimpleNewsletter\API\V1\MailingLists;
+use Bitter\SimpleNewsletter\API\V1\Middleware\FractalNegotiatorMiddleware;
+use Bitter\SimpleNewsletter\API\V1\Subscribers;
 use Concrete\Core\Routing\RouteListInterface;
 use Concrete\Core\Routing\Router;
 
@@ -20,6 +23,18 @@ class RouteList implements RouteListInterface
         $router
             ->buildGroup()
             ->routes('api.php', 'simple_newsletter');
+
+        $router
+            ->buildGroup()
+            ->setPrefix('/api/v1')
+            ->addMiddleware(FractalNegotiatorMiddleware::class)
+            ->routes(function ($groupRouter) {
+                /** @var $groupRouter Router */
+                /** @noinspection PhpParamsInspection */
+                $groupRouter->all('/subscribers/subscribe', [Subscribers::class, 'subscribe']);
+                /** @noinspection PhpParamsInspection */
+                $groupRouter->all('/mailing_lists/get_all', [MailingLists::class, 'getAll']);
+            });
 
         $router
             ->buildGroup()
