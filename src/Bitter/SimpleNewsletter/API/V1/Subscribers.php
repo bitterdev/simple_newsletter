@@ -83,8 +83,8 @@ EOL
 
             if ($subscribePage instanceof Page) {
                 $this->subscribeService->subscribe(
-                    $this->request->request->get("email"),
-                    [$this->request->request->get("mailingListId")],
+                    $this->request->query->get("email"),
+                    [$this->request->query->get("mailingListId")],
                     Url::to($subscribePage, "confirm_subscription")
                 );
 
