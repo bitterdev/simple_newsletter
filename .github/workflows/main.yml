@@ -1,45 +1,71 @@
-name: CI
+name: Build & Deploy
+
 on:
   push:
-    branches: [ master, main]
-  repository_dispatch:
+    branches:
+      - main
+
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
+
+    env:
+      BITTER_API_KEY: ${{ secrets.BITTER_API_KEY }}
+
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      - name: "Cancel other workflows"
-        uses: potiuk/cancel-workflow-runs@master
+      - name: Set package name from repository name
+        id: set_package_name
+        run: echo "PACKAGE_NAME=$(basename $GITHUB_REPOSITORY)" >> $GITHUB_ENV
+
+      - name: Setup PHP with Composer
+        uses: shivammathur/setup-php@v2
         with:
-          cancelMode: allDuplicates
-          cancelFutureDuplicates: true
-          token: ${{ secrets.GITHUB_TOKEN }}
-          workflowFileName: main.yml
+          php-version: '8.1' # oder andere Version falls benötigt
+          tools: composer
 
-      - name: Install project dependencies
-        uses: php-actions/composer@v6
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          php_version: 7.1
-          dev: no
-          php_extensions: json
+          node-version: '18' # oder andere stabile Version
 
-      - name: Set env
-        run: echo "REPOSITORY_NAME=$(echo '${{ github.repository }}' | awk -F '/' '{print $2}')" >> $GITHUB_ENV
-
-      - name: Create ZIP archive
+      - name: Run composer install if composer.json exists
         run: |
-          mkdir ${{ env.REPOSITORY_NAME }}
-          rsync -av --exclude='./${{ env.REPOSITORY_NAME }}' ./ ./${{ env.REPOSITORY_NAME }}
-          find ./${{ env.REPOSITORY_NAME }} -path '*/.*' -prune -o -type f -print | zip ./build.zip -@
-          rm -rf ${{ env.REPOSITORY_NAME }}
+          if [ -f "composer.json" ]; then
+            echo "Running composer install..."
+            composer install --no-interaction --prefer-dist --no-progress
+          fi
 
-      - name: Deploy ZIP archive to bitter.de
+      - name: Run npm install, install grunt and run grunt if package.json exists
         run: |
-          curl -i -X POST -H "Content-Type: multipart/form-data" -F \
-            'file=@build.zip' \
-            https://www.bitter.de/api/v1/addons/update/${{ env.REPOSITORY_NAME }}
+          if [ -f "package.json" ]; then
+            echo "Running npm install..."
+            npm install
+            echo "Installing grunt-cli globally..."
+            npm install -g grunt-cli
+            echo "Running grunt..."
+            grunt
+          fi
 
-      - name: Trigger Build Workflow for bitter_de
+      - name: Upload ZIP to bitter.de API
         run: |
-          curl -XPOST -u "bitterdev:${{secrets.PRIVATE_ACCESS_TOKEN}}" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/bitterdev/bitter_de/dispatches --data '{"event_type": "build_application"}'
+          FILE_PATH="release/${PACKAGE_NAME}.zip"
+          if [ -f "$FILE_PATH" ]; then
+            echo "Uploading $FILE_PATH to bitter.de..."
+            curl -F "file=@$FILE_PATH" "https://bitter.de/index.php/api/v1/addons/update?apikey=${BITTER_API_KEY}"
+          else
+            echo "File $FILE_PATH not found, skipping upload."
+          fi
+
+      - name: Deploy to production server
+        uses: burnett01/rsync-deployments@4.1
+        with:
+          switches: -avzr --ignore-errors
+          path: /
+          remote_port: 65002
+          remote_path: /home/u187151543/domains/bitter.de/public_html/packages/${{ env.PACKAGE_NAME }}
+          remote_host: 213.130.145.194
+          remote_user: u187151543
+          remote_key: ${{ secrets.PRODUCTION_SSH_KEY }}
