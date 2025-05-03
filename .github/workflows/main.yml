@@ -59,6 +59,33 @@ jobs:
             echo "File $FILE_PATH not found, skipping upload."
           fi
 
+      - name: Cleanup trash files and folders
+        run: |
+          echo "Cleaning up unnecessary files and directories..."
+
+          # Directories
+          rm -rf node_modules
+          rm -rf release
+          rm -rf .git
+          rm -rf dist
+          rm -rf build
+          rm -rf .vscode
+          rm -rf .idea
+          rm -rf .cache
+          rm -rf coverage
+          rm -rf tmp
+          rm -rf temp
+
+          # Files
+          find . -type f -name "*.log" -delete
+          find . -type f -name "*.bak" -delete
+          find . -type f -name "*.swp" -delete
+          find . -type f -name "*.swo" -delete
+          find . -type f -name ".DS_Store" -delete
+          find . -type f -name "Thumbs.db" -delete
+
+          echo "Cleanup complete."
+
       - name: Deploy to production server
         uses: burnett01/rsync-deployments@4.1
         with:
