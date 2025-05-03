@@ -54,7 +54,7 @@ jobs:
           FILE_PATH="release/${PACKAGE_NAME}.zip"
           if [ -f "$FILE_PATH" ]; then
             echo "Uploading $FILE_PATH to bitter.de..."
-            curl -F "file=@$FILE_PATH" "https://bitter.de/index.php/api/v1/addons/update?apikey=${BITTER_API_KEY}"
+            curl -F "file=@$FILE_PATH" "https://bitter.de/index.php/api/v1/addons/update/${{ env.PACKAGE_NAME }}?apikey=${BITTER_API_KEY}"
           else
             echo "File $FILE_PATH not found, skipping upload."
           fi
