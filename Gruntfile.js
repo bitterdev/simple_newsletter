@@ -11,6 +11,11 @@ var packageName = "simple_newsletter";
 module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        exec: {
+          composer_install: {
+            cmd: 'composer install'
+          }
+        },
         version: {
             php: {
                 options: {
@@ -32,22 +37,6 @@ module.exports = function (grunt) {
                 src: [
                     'dist/*.php', 'dist/**/*.php', 'dist/**/**/*.php', 'dist/**/**/**/*.php', 'dist/**/**/**/**/*.php'
                 ]
-            }
-        },
-        composer: {
-            options: {
-                usePhp: true,
-                composerLocation: './node_modules/getcomposer/composer.phar'
-            },
-            dev: {
-                options: {
-                    flags: ['ignore-platform-reqs']
-                }
-            },
-            release: {
-                options: {
-                    flags: ['no-dev']
-                }
             }
         },
         copy: {
@@ -83,16 +72,15 @@ module.exports = function (grunt) {
             }
         },
         clean: {
-            dist: ['dist'],
-            composer: ['vendor', 'composer.lock']
+            dist: ['dist']
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-compress');
     grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-composer');
+    grunt.loadNpmTasks('grunt-exec');
     grunt.loadNpmTasks('grunt-version');
     grunt.loadNpmTasks('grunt-contrib-copy');
 
-    grunt.registerTask('default', ['clean:dist', 'copy', 'version', 'clean:composer', 'composer:dev:install', 'compress:main', 'clean:dist']);
+    grunt.registerTask('default', ['clean:dist', 'copy', 'version', 'compress:main', 'clean:dist']);
 };
