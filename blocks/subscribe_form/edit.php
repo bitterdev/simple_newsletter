@@ -28,6 +28,9 @@ $mailingLists = [0 => t("*** Please select")] + $mailingLists;
 $selectedMailingList = $selectedMailingList ?? 0;
 
 \Concrete\Core\View\View::element("dashboard/help_blocktypes", [], "simple_newsletter");
+
+/** @noinspection PhpUnhandledExceptionInspection */
+View::element("dashboard/did_you_know", [], "simple_newsletter");
 ?>
 
 <div class="form-group">

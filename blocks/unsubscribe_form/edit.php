@@ -23,6 +23,9 @@ use Concrete\Core\View\View;
 /** @var Form $form */
 
 \Concrete\Core\View\View::element("dashboard/help_blocktypes", [], "simple_newsletter");
+
+/** @noinspection PhpUnhandledExceptionInspection */
+\Concrete\Core\View\View::element("dashboard/did_you_know", [], "simple_newsletter");
 ?>
 
 <div class="form-group">

@@ -31,6 +31,8 @@ $form = $app->make(Form::class);
         <?php \Concrete\Core\View\View::element("dashboard/help", [], "simple_newsletter"); ?>
     </div>
 
+    <?php \Concrete\Core\View\View::element("dashboard/did_you_know", [], "simple_newsletter"); ?>
+    
     <form action="#" method="post">
         <?php echo $token->output("update_campaign"); ?>
 
