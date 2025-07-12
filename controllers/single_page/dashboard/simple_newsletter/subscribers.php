@@ -8,7 +8,6 @@
  *
  * @author     Fabian Bitter (fabian@bitter.de)
  * @copyright  (C) 2023 Fabian Bitter (www.bitter.de)
- * @version    X.X.X
  */
 
 namespace Concrete\Package\SimpleNewsletter\Controller\SinglePage\Dashboard\SimpleNewsletter;

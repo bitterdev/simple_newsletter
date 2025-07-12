@@ -5,7 +5,6 @@
  *
  * @author     Fabian Bitter (fabian@bitter.de)
  * @copyright  (C) 2023 Fabian Bitter (www.bitter.de)
- * @version    X.X.X
  */
 
 namespace Concrete\Package\SimpleNewsletter;
@@ -19,7 +18,7 @@ use Concrete\Core\Database\EntityManager\Provider\StandardPackageProvider;
 class Controller extends Package implements ProviderAggregateInterface
 {
     protected $pkgHandle = 'simple_newsletter';
-    protected $pkgVersion = '1.5.4';
+    protected $pkgVersion = '1.5.5';
     protected $appVersionRequired = '8.0.0';
     protected $pkgAutoloaderRegistries = [
         'src/Bitter/SimpleNewsletter' => 'Bitter\SimpleNewsletter',
